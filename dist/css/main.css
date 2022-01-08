@@ -95,6 +95,9 @@ input[class^='btn-']:hover {
   display: block;
   margin: 0 auto 1rem auto; }
 
+.text-bold {
+  font-weight: 600; }
+
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -366,6 +369,10 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.5rem; }
+  #about-d .testimonials img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; }
   #about-d .testimonials ul {
     list-style: none;
     margin-top: 1rem;
@@ -378,23 +385,6 @@ a {
     height: 150px;
     text-align: justify;
     overflow: auto; }
-  #about-d .testimonials .test {
-    height: 50px;
-    width: 50px;
-    margin-right: 0.5rem;
-    border-radius: 50%; }
-  #about-d .testimonials .test-1 {
-    background: url("/dist/img/IFW.jpg") no-repeat center center/contain; }
-  #about-d .testimonials .test-2 {
-    background: url("/dist/img/city-2.jpg") no-repeat center center/contain; }
-  #about-d .testimonials .test-3 {
-    background: url("/dist/img/Goy.jpg") no-repeat center center/cover;
-    border-radius: 50%;
-    width: 30px; }
-  #about-d .testimonials .test-4 {
-    background: url("/dist/img/Centro.jpg") no-repeat center center/cover;
-    border-radius: 50%;
-    width: 30px; }
 
 #contact-a .text-fields {
   display: grid;
