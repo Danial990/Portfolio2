@@ -252,7 +252,7 @@ a {
     #header-home .header-content h1 {
       font-size: 4rem;
       line-height: 1.2;
-      color: #333; }
+      color: #fff; }
     #header-home .header-content p {
       color: #fff;
       font-size: 1.4rem;
@@ -472,9 +472,10 @@ a {
     flex-direction: column;
     align-items: center; }
     #main-nav ul {
-      height: 50px; }
+      height: 40px; }
     #main-nav li {
-      padding: 1rem; }
+      padding-right: 1rem;
+      padding-left: 1rem; }
     #main-nav a {
       font-size: 0.8rem; }
     #main-nav #logo {
