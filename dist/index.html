@@ -20,12 +20,20 @@
         <div class="container">
             <nav id="main-nav">
                 <img src="img/DH-1.png" alt="My Portfolio" id="logo">
-                <ul>
-                    <li> <a href="index.html" class="current">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="work.html">Work</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
+
+                <ul class="nav-menu">
+                    <li> <a class="nav-link current" href="index.html">Home</a></li>
+                    <li> <a class="nav-link" href="about.html">About</a></li>
+                    <li> <a class="nav-link" href="work.html">Work</a></li>
+                    <li> <a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </div>
+
+
             </nav>
             <div class="header-content">
                 <h1>I Am Danial The <span class="txt-type" data-wait="3000"
@@ -160,7 +168,24 @@
     </footer>
     <!-- type effect  -->
     <script src="js/typewriter.js"></script>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+
+        })
+
+        document.querySelectorAll(".nav-link").forEach(n => n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                const testi = document.querySelectorAll("nav-link")
+                console.log(testi)
+            }))
+    </script>
 </body>
 
 </html>

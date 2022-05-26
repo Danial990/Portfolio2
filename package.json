@@ -11,5 +11,15 @@
   "dependencies": {
     "encoding": "^0.1.13",
     "node-sass": "^6.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danial990/Portfolio2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Danial990/Portfolio2/issues"
+  },
+  "homepage": "https://github.com/Danial990/Portfolio2#readme"
 }

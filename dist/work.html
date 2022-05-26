@@ -19,12 +19,17 @@
         <div class="container">
             <nav id="main-nav">
                 <img src="img/DH.png" alt="My Portfolio" id="logo">
-                <ul>
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="work.html" class="current">Work</a></li>
-                    <li> <a href="contact.html">Contact</a></li>
+                <ul class="nav-menu">
+                    <li> <a class="nav-link " href="index.html">Home</a></li>
+                    <li> <a class="nav-link " href="about.html">About</a></li>
+                    <li> <a class="nav-link current" href="work.html">Work</a></li>
+                    <li> <a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="hamburger" onclick="()=>{console.log('salam')}">
+                    <span class="bars" onclick="()=>{console.log('salam')}"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </div>
             </nav>
         </div>
     </header>
@@ -142,6 +147,38 @@
         </div>
     </footer>
 
+    <script>
+        const onWorks = document.querySelector(".items");
+        const onItem = document.querySelectorAll(".item");
+        const onNav = document.getElementById("main-nav")
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            onItem.forEach(element => {
+                element.classList.toggle("z-index");           
+            });
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }));
+
+
+
+        //     onNav.addEventListener("mouseover", () => {
+        //     onItem.forEach(element => {
+        //         element.classList.toggle("z-index");           
+        //     });
+        // });
+
+
+
+    </script>
 
 </body>
 

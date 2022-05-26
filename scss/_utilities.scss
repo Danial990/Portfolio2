@@ -1,35 +1,42 @@
+@import 'config';
+
 .container {
     max-width: $website-width;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
     margin: auto;
     overflow: hidden;
 }
+
 // Buttons
 %btn-shared {
     display: inline-block;
     padding: 0.8rem 2rem;
-    transition:all 0.5s;
+    transition: all 0.5s;
     border: none;
     cursor: pointer;
 
 }
+
 .btn {
     &-main {
         @extend %btn-shared;
         color: #333;
         background-color: $main-color;
     }
+
     &-light {
         @extend %btn-shared;
         color: #333;
         background-color: $main-color;
         border-radius: 10px;
         box-shadow: inset 2px 2px 5px;
-        &:hover{
+
+        &:hover {
             opacity: 0.6;
             background-color: #fff !important;
         }
     }
+
     &-dark {
         @extend %btn-shared;
         color: #f4f4f4;
@@ -42,67 +49,82 @@ a[class^='btn-']:hover,
 input[class^='btn-']:hover {
     background-color: $main-color;
 }
+
 // Backgrounds
-.bg{
-    &-main{
+.bg {
+    &-main {
         background: $main-color;
         color: set-text-color($main-color);
-    
+
     }
-    &-dark{
+
+    &-dark {
         background: $dark-color;
         color: set-text-color($dark-color);
-    
+
     }
-    &-light{
+
+    &-light {
         background: $light-color;
         color: set-text-color($light-color);
-    
+
     }
-    &-medium{
+
+    &-medium {
         background: $medium-color;
         color: set-text-color($medium-color);
-    
+
     }
 }
-.lead{
+
+.lead {
     font-size: 1.3rem;
     margin-bottom: 4rem;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
+
 // padding
 .py {
-    &-1{
+    &-1 {
         padding: 1rem 0;
     }
-    &-2{
+
+    &-2 {
         padding: 2rem 0;
     }
-    &-3{
+
+    &-3 {
         padding: 3rem 0;
     }
-    &-4{
+
+    &-4 {
         padding: 4rem 0;
     }
 }
+
 // Margin
 .my {
-    &-1{
-       margin: 1rem 0;
+    &-1 {
+        margin: 1rem 0;
     }
-    &-2{
-       margin: 2rem 0;
+
+    &-2 {
+        margin: 2rem 0;
     }
-    &-3{
-       margin: 3rem 0;
+
+    &-3 {
+        margin: 3rem 0;
     }
-    &-4{
-       margin: 4rem 0;
+
+    &-4 {
+        margin: 4rem 0;
     }
 }
-.section-title{
+
+.section-title {
     font-size: 2rem;
     display: block;
     padding-bottom: 0.5rem;
@@ -110,8 +132,9 @@ input[class^='btn-']:hover {
     text-transform: uppercase;
     font-weight: 100;
 }
-.bottom-line{
-    height:2px;
+
+.bottom-line {
+    height: 2px;
     width: 3rem;
     background: $main-color;
     display: block;
@@ -119,6 +142,26 @@ input[class^='btn-']:hover {
 }
 
 
-.text-bold{
+.text-bold {
     font-weight: 600;
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(216, 45, 45);
+}
+
+#main-nav {
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+.z-index{
+    z-index: -1;
 }
