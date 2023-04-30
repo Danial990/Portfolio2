@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #007bec;
+        color: aliceblue;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    input {
+        border-radius: 7px;
+        padding: 5px;
+    }
+
+    .form-element {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 7px 10px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <!-- <form>
+        <div class="form-element">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input type="text" id="password">
+        </div>
+        <button type="submit">Submit</button>
+    </form> -->
+
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // function helloWorld() {
+        //     return <div> Hello World </div>;
+        // }
+
+        // in tabe dare alan ye element react barmigardune,
+        //  pas yek component mahsub mishe.
+
+        // const element = helloWorld();
+        // // console.log(element);
+
+        // ReactDOM.render(element, document.getElementById('root'));
+
+
+
+
+        // function HelloWorld() {
+        //     return <div> Hello World </div>;
+        // }
+
+
+        // // inja baraye inke be in shekl helloWorld ro benevisim
+        // // bayad be surate PascalCase neveshte shavad. yani harfe
+        // // avval bozorg bashad.
+
+        // ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+
+
+
+
+        // tabdile forme bala be component
+
+        function Username() {
+            return <div className="form-element">
+                <label htmlFor="username">Username</label>
+                <input type="text" id="username" />
+            </div>
+        }
+
+        function Password() {
+            return < div className="form-element" >
+                <label htmlFor="password">Password</label>
+                <input type="text" id="password" />
+            </div >
+        }
+
+        function Button() {
+            return <button type="submit">Submit</button>
+        }
+
+        function SignInForm() {
+            return <form>
+                <Username />
+                <Password />
+                <Button />
+
+            </form>
+        }
+
+        ReactDOM.render(<SignInForm />, document.getElementById('root'));
+
+
+    </script>
+</body>
+
+</html>

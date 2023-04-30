@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="test"></div>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        function genrateCart(name, age) {
+
+            return React.createElement('div', { class: 'cart' },
+                React.createElement('span', null, `name : ${name}`),
+                React.createElement('span', null, `age : ${age}`)
+            );
+        }
+
+        const userData = [
+            { name: 'Danial', age: 32 },
+            { name: 'Aria', age: 45 },
+            { name: 'Barzan', age: 67 }
+        ]
+
+        const carts = userData.map(data => {
+            return genrateCart(data.name, data.age);
+        })
+
+        const container = React.createElement('div',
+            { class: 'container' },
+            carts);
+
+        ReactDOM.render(container, document.getElementById('root'));
+
+        const container2 = React.createElement('div', null, 'Hello World');
+        ReactDOM.render(container2, document.getElementById('test'));
+
+
+    </script>
+</body>
+
+</html>

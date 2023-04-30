@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // function hello(user) {
+        //     return 'Hello ' + user.name + ' ' + user.last;
+        // }
+        // console.log(hello({ name: 'Danial', last: 'Hazrati' }));
+
+        function Greeting(props) {
+            return <div>greeting {props.name}</div>
+        }
+// inja mige ke jaryane estefade az props az valed be farzande ya az bala be paiin. in paiin alan az props valed name ro gereft be greeting dad.
+        function Hello(props) {
+            console.log(props);
+            return <div>
+                <div>hello {props.name}{props.last}</div>
+                <Greeting name={props.name}/>
+            </div>
+        }
+
+        const element =
+            <Hello name='Danial' last='Hazrati'/>
+            // inja ye children be props componente Hello pos dadim:
+            // <div>greeting</div> 
+            // </Hello>
+        
+
+        ReactDOM.render(element, document.getElementById('root')); 
+    </script>
+</body>
+
+</html>

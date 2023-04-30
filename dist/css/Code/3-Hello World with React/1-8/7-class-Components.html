@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <form>
+        <div class="form-element">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input type="text" id="password">
+        </div>
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <div id="root"> </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        // class HelloWorld extends React.Component {
+        //     render() {
+        //         return <div> Hello World!</div>
+        //     }
+        // }
+
+        // ReactDOM.render(<HelloWorld/>, document.getElementById('root'));
+
+
+        //tabdile form login be class:
+        class Username extends React.Component {
+            render() {
+                return <div className="form-element">
+                    <label htmlFor="username">Username</label>
+                    <input type="text" id="username" />
+                </div>
+            }
+        }
+        class Password extends React.Component {
+            render() {
+                return <div className="form-element">
+                    <label htmlFor="password">Password</label>
+                    <input type="text" id="password" />
+                </div>
+            }
+        }
+        function Button() {
+            return <button type="submit">Submit</button>
+        }
+        class GenrateFrom extends React.Component {
+            render() {
+                return < form >
+                    <Username />
+                    <Password />
+                    <Button />
+                </form >
+            }
+        }
+        ReactDOM.render(<GenrateFrom />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
